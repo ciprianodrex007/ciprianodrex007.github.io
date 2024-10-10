@@ -12,26 +12,13 @@ class HeaderLogo extends StatelessWidget {
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
         child: GestureDetector(
-          onTap: () {},
-          child: RichText(
-            text: TextSpan(children: [
-              TextSpan(
-                text: "D",
-                style: GoogleFonts.oswald(
-                    color: Colors.white,
-                    fontSize: 32.0,
-                    fontWeight: FontWeight.bold),
-              ),
-              TextSpan(
-                text: ".",
-                style: GoogleFonts.oswald(
-                    color: kPrimaryColor,
-                    fontSize: 36.0,
-                    fontWeight: FontWeight.bold),
-              )
-            ]),
-          ),
-        ),
+            onTap: () {},
+            child: Image.asset(
+              'assets/mylogo.jpg',
+              fit: BoxFit.contain,
+              height: MediaQuery.of(context).size.height * 0.10,
+              width: MediaQuery.of(context).size.width * 0.07,
+            )),
       ),
     );
   }

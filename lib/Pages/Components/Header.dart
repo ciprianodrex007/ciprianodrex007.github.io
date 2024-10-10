@@ -6,9 +6,10 @@ import 'package:myweb_portfolio/Utils/Logo_Row.dart';
 import 'package:myweb_portfolio/Utils/Screen_Helper.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 
-
 class Header extends StatelessWidget {
-  Header({super.key});
+  final Function(int) onItemTapped; // Accepting the callback
+  final int selectedIndex;
+  const Header({super.key, required this.onItemTapped, required this.selectedIndex});
 
   @override
   Widget build(BuildContext context) {
@@ -34,12 +35,14 @@ class Header extends StatelessWidget {
             HeaderLogo(),
             GestureDetector(
               onTap: () {
-              Globals.scaffoldkey.currentState?.openEndDrawer();
+                Globals.scaffoldkey.currentState?.openEndDrawer();
               },
-              child: Icon(Icons.menu,
-              color: Colors.white,
-              size: 28.0,),
-            )
+              child: Icon(
+                Icons.menu,
+                color: Colors.white,
+                size: 28.0,
+              ),
+            ),
           ],
         ),
       ),
@@ -49,10 +52,13 @@ class Header extends StatelessWidget {
   Widget buildHeader() {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 16.0),
-      child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-        HeaderLogo(),
-        HeaderRow(),
-      ]),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          HeaderLogo(),
+          HeaderRow(onItemTapped: onItemTapped, selectedIndex: selectedIndex,), // Pass the callback here
+        ],
+      ),
     );
   }
 }

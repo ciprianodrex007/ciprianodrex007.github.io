@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: "My Flutter Portfolio",
+        title: "Drexler's Portfolio",
         themeMode: ThemeMode.dark,
         darkTheme: Theme.of(context).copyWith(
           platform: TargetPlatform.android,

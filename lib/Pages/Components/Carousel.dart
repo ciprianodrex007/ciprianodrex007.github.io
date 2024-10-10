@@ -7,6 +7,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:myweb_portfolio/Models/Carousel_items_model.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
+import '../../Models/footer.dart';
+
 class Carousel extends StatelessWidget {
   Carousel({super.key});
 
@@ -61,18 +63,18 @@ class Carousel extends StatelessWidget {
 
 
     return Container(
-      height: carouselContainerHeight,
-      // color: Colors.yellow,
+      height: MediaQuery.of(context).size.height,
       width: double.infinity,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
             alignment: Alignment.center,
             child: CarouselSlider(
               carouselController: carouselController,
               options: CarouselOptions(
-                // autoPlay: true,
+                autoPlay: true,
+                autoPlayInterval: Duration(seconds: 4),
                 viewportFraction: 1,
                 scrollPhysics: NeverScrollableScrollPhysics(),
                 height: carouselContainerHeight,
@@ -105,7 +107,8 @@ class Carousel extends StatelessWidget {
                 }),
               ),
             ),
-          )
+          ),
+          Footer(),
         ],
       ),
     );

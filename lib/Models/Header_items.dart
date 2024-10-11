@@ -44,8 +44,6 @@ List<HeaderItem> headerItems = [
   }),
   HeaderItem(title: "MY INTRO", onTap: (BuildContext context) {
   }),
-  HeaderItem(title: "SERVICES", onTap: (BuildContext context) {
-  }),
   HeaderItem(title: "PORTFOLIO", onTap: (BuildContext context) {
   }),
   HeaderItem(title: "TESTIMONIALS", onTap: (BuildContext context) {

@@ -12,7 +12,7 @@ class Footer extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
-            '© 2024 Drexler Cipriano. All Rights Reserved.',
+            '© 2024 Build with love ❤️ by Drexler Cipriano',
             style: TextStyle(
               color: Colors.white,
               fontSize: 16.0,

@@ -191,6 +191,87 @@ List<CarouselItemModel> carouselItems = [
       fit: BoxFit.contain,
     ),
   ),
+
+
+  CarouselItemModel(
+    text: Container(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            "AI Team (Awesome Interns Team)",
+            style: GoogleFonts.oswald(
+              color: kPrimaryColor,
+              fontWeight: FontWeight.bold,
+              fontSize: 16.0,
+            ),
+          ),
+          SizedBox(height: 18.0),
+          Text(
+            "Project",
+            style: GoogleFonts.oswald(
+              color: Colors.white,
+              fontSize: 25.0,
+              fontWeight: FontWeight.bold,
+              height: 1.3,
+            ),
+          ),
+          Text(
+            "Itemize",
+            style: GoogleFonts.oswald(
+              color: Colors.white,
+              fontSize: 40.0,
+              fontWeight: FontWeight.w900,
+              height: 1.3,
+            ),
+          ),
+          SizedBox(height: 10.0),
+          Text(
+            "Best in IT project at FDS Asya Philippines Inc.",
+            style: TextStyle(
+              color: kCaptionColor,
+              fontSize: 15.0,
+              height: 1.0,
+            ),
+          ),
+          SizedBox(height: 25),
+          Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+            MouseRegion(
+              cursor: SystemMouseCursors.click,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: kPrimaryColor,
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+                height: 48.0,
+                padding: EdgeInsets.symmetric(horizontal: 20.0),
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    "View More",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 13,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              width: 20,
+            ),
+          ])
+        ],
+      ),
+    ),
+    image: Image.asset(
+      'assets/details2.jpg',
+      fit: BoxFit.contain,
+    ),
+  ),
 ];
 
 

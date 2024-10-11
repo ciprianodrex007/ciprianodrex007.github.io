@@ -6,6 +6,7 @@ import 'package:myweb_portfolio/Utils/Globals.dart';
 
 import '../Models/footer.dart';
 import 'Components/Carousel.dart';
+import 'Components/ComingSoon.dart';
 import 'Components/Header.dart';
 import 'my_intro.dart';
 
@@ -33,11 +34,10 @@ class _HomeScreenState extends State<HomeScreen> {
   final List<Widget> screens = [
     Carousel(), // Index 0 - Initial screen (Carousel)
     MyIntro(), // Index 1 - My Intro content
-    Placeholder(), // Index 2 - Services placeholder
-    Placeholder(), // Index 3 - Portfolio placeholder
-    Placeholder(), // Index 4 - Testimonials placeholder
-    Placeholder(), // Index 5 - Blogs placeholder
-    Placeholder(), // Index 6 - Hire Me placeholder
+    ComingSoon(), // Index 3 - Portfolio placeholder
+    ComingSoon(), // Index 4 - Testimonials placeholder
+    ComingSoon(), // Index 5 - Blogs placeholder
+    ComingSoon(), // Index 6 - Hire Me placeholder
   ];
 
   @override
@@ -93,7 +93,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(56.0),
+        preferredSize: Size.fromHeight(106.0),
         child: Header(
             onItemTapped: updateIndex,
             selectedIndex: currentIndex), // Pass the callback

@@ -16,8 +16,8 @@ class HeaderLogo extends StatelessWidget {
             child: Image.asset(
               'assets/mylogo.jpg',
               fit: BoxFit.contain,
-              height: MediaQuery.of(context).size.height * 0.10,
-              width: MediaQuery.of(context).size.width * 0.07,
+              height: MediaQuery.of(context).size.height * 0.50,
+              width: MediaQuery.of(context).size.width * 0.11,
             )),
       ),
     );
